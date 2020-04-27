@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font.css">
+    <title>Ramona</title>
+</head>
+<header>
+    <img src="images/ramona_logo.png">
+</header>
+<body>
+
+    <div class="navigation">
+        <a href="#" data-filter="all" class="button">All</a>
+        <a href="#" data-filter="mujeres" class="button">Mujeres</a>
+        <a href="#" data-filter="hombres" class="button">Hombres</a>
+        <a href="#" data-filter="niños" class="button">Niños</a>
+        <a href="#" data-filter="accesorios" class="button">Accesorios</a>
+    </div>
+
+    <div class="imageContainer">
+        <div class="filter hombres">
+            <img src="images/chamarrah.png">
+        </div>
+        <div class="filter mujeres">
+            <img src="images/chamarram.png">
+        </div>
+        <div class="filter hombres">
+            <img src="images/playerah.png">
+        </div>
+        <div class="filter mujeres">
+            <img src="images/playeram.jpg">
+        </div>
+        <div class="filter niños">
+            <img src="images/uniformes1.jpg">
+        </div>
+        <div class="filter niños">
+            <img src="images/uniformes2.png">
+        </div>
+        <div class="filter niños">
+            <img src="images/uniformes3.jpg">
+        </div>
+        <div class="filter accesorios">
+            <img src="images/cosmeticos1.png">
+        </div>
+        <div class="filter accesorios">
+            <img src="images/cosmeticos2.png">
+        </div>
+        <div class="filter accesorios">
+            <img src="images/barnices.png">
+        </div>
+        <div class="filter niños">
+            <img src="images/ropaniños.jpg">
+        </div>
+        <div class="filter niños">
+            <img src="images/ropaniñosdos.jpg">
+        </div>
+    </div>
+
+    <h1>Contactanos:</h1>
+    <div class="social-media">
+
+    </div>
+    <footer>Ramona -  2019 &copy;</footer>
+
+ <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+        $(".button").click(function () {
+            var name = $(this).attr("data-filter");
+            if(name == "all"){
+                $(".filter").show("2000");
+            }
+            else {
+                $(".filter").not("."+name).hide("2000");
+                $(".filter").filter("."+name).show("2000");
+            }
+        });
+    });</script>
+</body>
+</html>
